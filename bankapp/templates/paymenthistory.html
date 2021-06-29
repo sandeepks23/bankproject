@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Credit Transaction History</h1>
+    {% for transaction in ctransactions %}
+    {{transaction.from_accountnumber}}
+    {{transaction.amount}}
+    {{transaction.note}}
+    {{transaction.date}}
+    {% endfor %}
+</div>
+<div>
+    <h1>Debit Transaction History</h1>
+    {% for transaction in dtransactions %}
+    {{transaction.to_accountnumber}}
+    {{transaction.amount}}
+    {{transaction.note}}
+    {{transaction.date}}
+    {% endfor %}
+</div>
+
+
+</body>
+</html>
